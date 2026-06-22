@@ -121,7 +121,7 @@ grep "Failed password" /var/log/auth.log
 
 Evidence:
 
-![Failed Passwords](../screenshots/manual-analysis/01-failed-passwords.png)
+![Failed Passwords](screenshots/manual-analysis/01-failed-passwords.png)
 
 Purpose:
 
@@ -139,7 +139,7 @@ grep "Accepted password" /var/log/auth.log
 
 Evidence:
 
-![Successful Logins](../screenshots/manual-analysis/02-successful-logins.png)
+![Successful Logins](screenshots/manual-analysis/02-successful-logins.png)
 
 Purpose:
 
@@ -157,7 +157,7 @@ grep "sudo:" /var/log/auth.log
 
 Evidence:
 
-![Sudo Activity](../screenshots/manual-analysis/03-sudo-activity.png)
+![Sudo Activity](screenshots/manual-analysis/03-sudo-activity.png)
 
 Purpose:
 
@@ -175,7 +175,7 @@ grep "Nmap" /var/log/apache2/access.log
 
 Evidence:
 
-![Nmap Detection](../screenshots/manual-analysis/04-nmap-user-agent-detection.png)
+![Nmap Detection](screenshots/manual-analysis/04-nmap-user-agent-detection.png)
 
 Purpose:
 
@@ -199,7 +199,7 @@ grep "gobuster" /var/log/apache2/access.log
 
 Evidence:
 
-![Gobuster Detection](../screenshots/manual-analysis/05-gobuster-user-agent-detection.png)
+![Gobuster Detection](screenshots/manual-analysis/05-gobuster-user-agent-detection.png)
 
 Purpose:
 
@@ -223,7 +223,7 @@ grep ' 404 ' /var/log/apache2/access.log
 
 Evidence:
 
-![404 Burst Analysis](../screenshots/manual-analysis/08-404-burst-analysis.png)
+![404 Burst Analysis](screenshots/manual-analysis/08-404-burst-analysis.png)
 
 Purpose:
 
