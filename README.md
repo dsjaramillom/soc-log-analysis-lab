@@ -1,40 +1,66 @@
 # SOC Log Analysis Lab
 
-A practical cybersecurity lab focused on log analysis, attack simulation, incident investigation, and defensive documentation.
+A hands-on cybersecurity lab focused on attack simulation, log analysis, incident investigation, and defensive documentation.
 
-This repository documents hands-on blue team exercises using a controlled lab environment with Linux servers and attack simulation through Kali Linux.
+This repository documents practical blue team exercises performed in a controlled environment using Ubuntu Server as the target system and Kali Linux as the attacking machine.
 
 ---
 
-## Objective
+## Project Objective
 
-The purpose of this project is to build practical Security Operations Center (SOC) skills by simulating attacks, analyzing logs, documenting incidents, and improving detection capabilities.
+The goal of this project is to simulate real-world attack scenarios and analyze their impact from a SOC Tier 1 perspective.
 
 Main focus areas:
 
 * Linux authentication log analysis
+* Network reconnaissance
 * SSH brute force detection
-* Web server monitoring
-* Incident triage and documentation
-* Threat detection mapping
-* Basic adversary emulation
+* Web enumeration analysis
+* Apache access log investigation
+* Incident documentation
+* Threat detection automation
 
 ---
 
-## Lab Environment
+## Lab Architecture
 
-### Infrastructure
+```text
+Kali Linux (Attacker) ---> Ubuntu Server (Victim)
+```
 
-* Attacker Machine: Kali Linux
-* Target Machine: Ubuntu Server
-* Services:
+Environment:
 
-  * SSH
-  * Apache
+* Kali Linux
+* Ubuntu Server
+* VirtualBox Internal Network: `SOC-LAB`
+* NAT enabled for internet access
 
-### Network Configuration
+---
 
-Lab setup screenshots:
+## Network Configuration
+
+### Ubuntu Server
+
+IP Address:
+
+```text
+192.168.56.10
+```
+
+### Kali Linux
+
+IP Address:
+
+```text
+192.168.56.11
+```
+
+Validation:
+
+* Successful ping between both machines
+* Internal communication established
+
+Evidence:
 
 ![Kali Network](screenshots/lab-setup/01-kali-network-config.png)
 
@@ -42,45 +68,128 @@ Lab setup screenshots:
 
 ---
 
-## Services Validation
+## Services Installed
 
-### Apache Service
+### SSH
 
-![Apache Status](screenshots/lab-setup/03-apache-service-status.png)
-
-### SSH Service
+Service status:
 
 ![SSH Status](screenshots/lab-setup/04-ssh-service-status.png)
 
-### Open Ports
+Purpose:
+
+* Remote administration
+* Authentication analysis
+* Brute force simulation target
+
+---
+
+### Apache
+
+Service status:
+
+![Apache Status](screenshots/lab-setup/03-apache-service-status.png)
+
+Purpose:
+
+* Web enumeration analysis
+* HTTP request logging
+* Web attack simulation
+
+---
+
+## Open Ports Validation
+
+Open ports identified:
+
+* Port 22 (SSH)
+* Port 80 (HTTP)
+
+Evidence:
 
 ![Open Ports](screenshots/lab-setup/05-open-ports.png)
 
 ---
 
-## Completed Labs
+## Baseline Log Documentation
 
-### Lab 01 — SSH Brute Force Analysis
+Before launching attacks, baseline logs were reviewed to establish normal system behavior.
 
-Description:
+Reviewed logs:
 
-Simulated SSH authentication attempts including:
+* `/var/log/auth.log`
+* `/var/log/apache2/access.log`
+* `/var/log/syslog`
 
-* Invalid user login attempts
-* Failed authentication attempts
-* Successful login events
-* Privilege escalation activity
+Purpose:
+
+* Understand normal system activity
+* Create comparison points for future attacks
+* Improve incident visibility
 
 Evidence:
 
-![Kali Brute Force](screenshots/ssh-bruteforce/01-kali-bruteforce.png)
+![Baseline Logs](screenshots/lab-setup/06-baseline-log-preview.png)
 
-![Auth Log Evidence](screenshots/ssh-bruteforce/02-auth.log-report.png)
+---
+
+## Completed Phases
+
+### Phase 1 — Infrastructure Setup
+
+Completed:
+
+* Ubuntu installation
+* Kali installation
+* VirtualBox networking configuration
+* Internal communication validation
+* Initial documentation
 
 Documentation:
 
-* Incident Report:
-  `reports/ssh-bruteforce/incident-report.md`
+* `lab-setup/kali-setup.md`
+* `lab-setup/ubuntu-server-setup.md`
+* `lab-setup/network-diagram.md`
+
+---
+
+### Phase 2 — Victim Preparation & Baseline
+
+Completed:
+
+* System update
+* SSH verification
+* Apache verification
+* Open ports validation
+* Baseline log inspection
+
+---
+
+### Phase 4 — SSH Brute Force Analysis
+
+Completed:
+
+Attack simulation included:
+
+* Invalid user attempts
+* Failed password authentication
+* Successful login validation
+* Privilege escalation visibility
+
+Evidence:
+
+![Brute Force Attempts](screenshots/ssh-bruteforce/01-kali-bruteforce.png)
+
+![Auth Log Report](screenshots/ssh-bruteforce/02-auth.log-report.png)
+
+Documentation:
+
+* `reports/ssh-bruteforce/incident-report.md`
+
+MITRE ATT&CK:
+
+* T1110 — Brute Force
+* T1078 — Valid Accounts
 
 ---
 
@@ -88,44 +197,123 @@ Documentation:
 
 ```text
 soc-log-analysis-lab/
+├── README.md
 ├── lab-setup/
 ├── logs/
-├── notes/
 ├── reports/
 ├── screenshots/
-└── scripts/
+├── scripts/
+└── notes/
 ```
-
----
-
-## MITRE ATT&CK Techniques Covered
-
-* T1110 — Brute Force
-* T1078 — Valid Accounts
 
 ---
 
 ## Roadmap
 
-Upcoming labs:
+### Phase 3 — Reconnaissance with Nmap
 
-* Apache log analysis
-* Web enumeration detection
-* Suspicious HTTP requests
-* Fail2Ban implementation
-* SSH key authentication hardening
-* Sigma detection rules
-* Bash log parsing automation
+Goal:
+
+* Identify open ports
+* Detect services
+* Fingerprint operating system
+* Analyze reconnaissance logs
+
+Planned report:
+
+* `reports/nmap-scan-report.md`
+
+---
+
+### Phase 5 — Web Enumeration with Gobuster
+
+Goal:
+
+* Enumerate directories
+* Generate Apache logs
+* Detect suspicious requests
+
+Planned report:
+
+* `reports/web-enumeration-report.md`
+
+---
+
+### Phase 6 — Manual Log Analysis
+
+Examples:
+
+```bash
+grep "Failed password" /var/log/auth.log
+grep "Accepted password" /var/log/auth.log
+grep "/admin" /var/log/apache2/access.log
+```
+
+Goal:
+
+* Detect suspicious behavior manually
+* Improve Linux log analysis skills
+
+---
+
+### Phase 7 — Python Automation
+
+Planned scripts:
+
+* `failed_logins.py`
+* `count_failed_logins_by_ip.py`
+* `suspicious_web_requests.py`
+* `sudo_activity_parser.py`
+
+Goal:
+
+* Automate event detection
+* Reduce manual analysis time
+
+---
+
+### Phase 8 — SOC Reports
+
+Standard format:
+
+* Summary
+* Source IP
+* Target
+* Evidence
+* Impact
+* Recommendations
+
+---
+
+## Current Focus
+
+Current active phase:
+
+```text
+Phase 3 — Reconnaissance with Nmap
+```
+
+Next attack:
+
+```bash
+nmap -A 192.168.56.10
+```
 
 ---
 
 ## Analyst Notes
 
-This repository is part of my practical transition into cybersecurity, focused on SOC analysis, threat detection, and incident response.
+This repository represents my practical transition into cybersecurity with emphasis on:
 
-Current focus:
+* SOC operations
+* Blue team fundamentals
+* Linux security
+* Log analysis
+* Incident response
+* Threat detection
+
+Current training:
 
 * Cisco CCST Cybersecurity
 * Linux log analysis
-* Blue team fundamentals
-* SOC analyst preparation
+* SOC Tier 1 preparation
