@@ -253,36 +253,46 @@ soc-log-analysis-lab/
 
 ---
 
-## Roadmap
-
 ### Phase 5 — Web Enumeration with Gobuster
 
-Goal:
+Completed:
 
-* Enumerate directories
-* Generate Apache logs
-* Detect suspicious requests
+Attack simulation included:
 
-Planned report:
+- Directory brute forcing
+- Hidden endpoint discovery
+- Protected resource detection
+- Apache log analysis
+- Enumeration pattern identification
 
-* `reports/web-enumeration-report.md`
+Findings:
 
----
+- /.hta
+- /.htpasswd
+- /.htaccess
+- /index.html
+- /server-status
 
-### Phase 6 — Manual Log Analysis
+Apache logs showed:
 
-Examples:
+- Sequential GET requests
+- Multiple 404 responses
+- High request frequency
+- Gobuster signature detection
 
-```bash
-grep "Failed password" /var/log/auth.log
-grep "Accepted password" /var/log/auth.log
-grep "/admin" /var/log/apache2/access.log
-```
+Evidence:
 
-Goal:
+![Gobuster Scan](screenshots/web-enumeration/01-gobuster-scan.png)
 
-* Detect suspicious behavior manually
-* Improve Linux log analysis skills
+![Apache Enumeration Logs](screenshots/web-enumeration/02-apache-acesslog.png)
+
+Documentation:
+
+- `reports/web-enumeration/incident-report.md`
+
+MITRE ATT&CK:
+
+- T1595.003 — Web Vulnerability Scanning
 
 ---
 
