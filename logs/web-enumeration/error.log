@@ -1,0 +1,16 @@
+AH00558: apache2: Could not reliably determine the server's fully qualified domain name, using 127.0.1.1. Set the 'ServerName' directive globally to suppress this message
+[Sun Jun 21 20:34:54.845309 2026] [mpm_event:notice] [pid 2608:tid 2608] AH00489: Apache/2.4.66 (Ubuntu) configured -- resuming normal operations
+[Sun Jun 21 20:34:54.845364 2026] [core:notice] [pid 2608:tid 2608] AH00094: Command line: '/usr/sbin/apache2 -D FOREGROUND'
+[Mon Jun 22 02:24:09.949720 2026] [core:error] [pid 2624:tid 2629] [client 192.168.56.11:35804] AH00135: Invalid method in request RIJZ / HTTP/1.1
+[Mon Jun 22 02:39:23.896213 2026] [core:error] [pid 2624:tid 2630] [client 192.168.56.11:53748] AH00135: Invalid method in request FBIN / HTTP/1.1
+[Mon Jun 22 03:48:02.194650 2026] [authz_core:error] [pid 2624:tid 2637] [client 192.168.56.11:43772] AH01630: client denied by server configuration: /var/www/html/.hta
+[Mon Jun 22 03:48:02.200747 2026] [authz_core:error] [pid 2624:tid 2628] [client 192.168.56.11:43798] AH01630: client denied by server configuration: /var/www/html/.htaccess
+[Mon Jun 22 03:48:02.201229 2026] [authz_core:error] [pid 2624:tid 2633] [client 192.168.56.11:43748] AH01630: client denied by server configuration: /var/www/html/.htpasswd
+[Mon Jun 22 03:48:03.583634 2026] [authz_core:error] [pid 2626:tid 2662] [client 192.168.56.11:43992] AH01630: client denied by server configuration: /var/www/html/server-status
+AH00558: apache2: Could not reliably determine the server's fully qualified domain name, using 127.0.1.1. Set the 'ServerName' directive globally to suppress this message
+[Mon Jun 22 13:08:10.615517 2026] [mpm_event:notice] [pid 1454:tid 1454] AH00489: Apache/2.4.66 (Ubuntu) configured -- resuming normal operations
+[Mon Jun 22 13:08:10.615722 2026] [core:notice] [pid 1454:tid 1454] AH00094: Command line: '/usr/sbin/apache2 -D FOREGROUND'
+[Mon Jun 22 13:17:04.549819 2026] [mpm_event:notice] [pid 1454:tid 1454] AH00492: caught SIGWINCH, shutting down gracefully
+AH00558: apache2: Could not reliably determine the server's fully qualified domain name, using 127.0.1.1. Set the 'ServerName' directive globally to suppress this message
+[Mon Jun 22 13:19:18.456383 2026] [mpm_event:notice] [pid 1509:tid 1509] AH00489: Apache/2.4.66 (Ubuntu) configured -- resuming normal operations
+[Mon Jun 22 13:19:18.456419 2026] [core:notice] [pid 1509:tid 1509] AH00094: Command line: '/usr/sbin/apache2 -D FOREGROUND'

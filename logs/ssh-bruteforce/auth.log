@@ -1,0 +1,163 @@
+2026-06-22T01:59:18.393721+00:00 ubuntu-soc sudo: pam_unix(sudo:session): session closed for user root
+2026-06-22T01:59:21.006105+00:00 ubuntu-soc sudo: pam_unix(sudo:session): session opened for user root(uid=0) by analyst(uid=1000)
+2026-06-22T01:59:21.006460+00:00 ubuntu-soc sudo: analyst : TTY=/dev/tty1 ; PWD=/home/analyst ; USER=root ; COMMAND=/usr/bin/cat /var/log/auth.log
+2026-06-22T01:59:21.018319+00:00 ubuntu-soc sudo: pam_unix(sudo:session): session closed for user root
+2026-06-22T02:02:07.573975+00:00 ubuntu-soc sudo: pam_unix(sudo:session): session opened for user root(uid=0) by analyst(uid=1000)
+2026-06-22T02:02:07.574954+00:00 ubuntu-soc sudo: analyst : TTY=/dev/tty1 ; PWD=/home/analyst ; USER=root ; COMMAND=/usr/bin/tail -n 10 /var/log/auth.log
+2026-06-22T02:02:07.581480+00:00 ubuntu-soc sudo: pam_unix(sudo:session): session closed for user root
+2026-06-22T02:02:37.550610+00:00 ubuntu-soc sudo: pam_unix(sudo:session): session opened for user root(uid=0) by analyst(uid=1000)
+2026-06-22T02:02:37.565376+00:00 ubuntu-soc sudo: analyst : TTY=/dev/tty1 ; PWD=/home/analyst ; USER=root ; COMMAND=/usr/bin/tail -n /var/log/apache2/access.log
+2026-06-22T02:02:37.573792+00:00 ubuntu-soc sudo: pam_unix(sudo:session): session closed for user root
+2026-06-22T02:02:55.058353+00:00 ubuntu-soc sudo: pam_unix(sudo:session): session opened for user root(uid=0) by analyst(uid=1000)
+2026-06-22T02:02:55.058820+00:00 ubuntu-soc sudo: analyst : TTY=/dev/tty1 ; PWD=/home/analyst ; USER=root ; COMMAND=/usr/bin/tail -n 10 /var/log/apache2/access.log
+2026-06-22T02:02:55.102607+00:00 ubuntu-soc sudo: pam_unix(sudo:session): session closed for user root
+2026-06-22T02:03:04.991268+00:00 ubuntu-soc sudo: pam_unix(sudo:session): session opened for user root(uid=0) by analyst(uid=1000)
+2026-06-22T02:03:05.022586+00:00 ubuntu-soc sudo: analyst : TTY=/dev/tty1 ; PWD=/home/analyst ; USER=root ; COMMAND=/usr/bin/tail -n 10 /var/log/syslog
+2026-06-22T02:03:05.036008+00:00 ubuntu-soc sudo: pam_unix(sudo:session): session closed for user root
+2026-06-22T02:17:01.482285+00:00 ubuntu-soc CRON[4643]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2026-06-22T02:17:01.551560+00:00 ubuntu-soc CRON[4643]: pam_unix(cron:session): session closed for user root
+2026-06-22T02:23:51.837531+00:00 ubuntu-soc sshd-session[4656]: Connection closed by 192.168.56.11 port 33394
+2026-06-22T02:24:09.841431+00:00 ubuntu-soc sshd-session[4657]: error: Protocol major versions differ: 2 vs. 1
+2026-06-22T02:24:09.842432+00:00 ubuntu-soc sshd-session[4657]: banner exchange: Connection from 192.168.56.11 port 57418: could not read protocol version
+2026-06-22T02:24:09.943021+00:00 ubuntu-soc sshd-session[4658]: error: Protocol major versions differ: 2 vs. 1
+2026-06-22T02:24:09.952831+00:00 ubuntu-soc sshd-session[4658]: banner exchange: Connection from 192.168.56.11 port 57432: could not read protocol version
+2026-06-22T02:24:10.227271+00:00 ubuntu-soc sshd-session[4659]: Unable to negotiate with 192.168.56.11 port 57444: no matching key exchange method found. Their offer: diffie-hellman-group1-sha1,diffie-hellman-group14-sha1,diffie-hellman-group14-sha256,diffie-hellman-group16-sha512,diffie-hellman-group-exchange-sha1,diffie-hellman-group-exchange-sha256 [preauth]
+2026-06-22T02:24:10.372705+00:00 ubuntu-soc sshd-session[4661]: Unable to negotiate with 192.168.56.11 port 57448: no matching key exchange method found. Their offer: diffie-hellman-group1-sha1,diffie-hellman-group14-sha1,diffie-hellman-group14-sha256,diffie-hellman-group16-sha512,diffie-hellman-group-exchange-sha1,diffie-hellman-group-exchange-sha256 [preauth]
+2026-06-22T02:24:10.533784+00:00 ubuntu-soc sshd-session[4663]: Unable to negotiate with 192.168.56.11 port 57464: no matching key exchange method found. Their offer: diffie-hellman-group1-sha1,diffie-hellman-group14-sha1,diffie-hellman-group14-sha256,diffie-hellman-group16-sha512,diffie-hellman-group-exchange-sha1,diffie-hellman-group-exchange-sha256 [preauth]
+2026-06-22T02:24:10.708540+00:00 ubuntu-soc sshd-session[4665]: Unable to negotiate with 192.168.56.11 port 57472: no matching key exchange method found. Their offer: diffie-hellman-group1-sha1,diffie-hellman-group14-sha1,diffie-hellman-group14-sha256,diffie-hellman-group16-sha512,diffie-hellman-group-exchange-sha1,diffie-hellman-group-exchange-sha256 [preauth]
+2026-06-22T02:24:10.900917+00:00 ubuntu-soc sshd-session[4667]: Unable to negotiate with 192.168.56.11 port 57484: no matching key exchange method found. Their offer: diffie-hellman-group1-sha1,diffie-hellman-group14-sha1,diffie-hellman-group14-sha256,diffie-hellman-group16-sha512,diffie-hellman-group-exchange-sha1,diffie-hellman-group-exchange-sha256 [preauth]
+2026-06-22T02:24:11.034964+00:00 ubuntu-soc sshd-session[4669]: Unable to negotiate with 192.168.56.11 port 57490: no matching key exchange method found. Their offer: diffie-hellman-group1-sha1,diffie-hellman-group14-sha1,diffie-hellman-group14-sha256,diffie-hellman-group16-sha512,diffie-hellman-group-exchange-sha1,diffie-hellman-group-exchange-sha256 [preauth]
+2026-06-22T02:39:05.896211+00:00 ubuntu-soc sshd-session[4681]: Connection closed by 192.168.56.11 port 53710
+2026-06-22T02:39:23.783807+00:00 ubuntu-soc sshd-session[4682]: error: Protocol major versions differ: 2 vs. 1
+2026-06-22T02:39:23.792617+00:00 ubuntu-soc sshd-session[4682]: banner exchange: Connection from 192.168.56.11 port 53032: could not read protocol version
+2026-06-22T02:39:23.892320+00:00 ubuntu-soc sshd-session[4683]: error: Protocol major versions differ: 2 vs. 1
+2026-06-22T02:39:23.892842+00:00 ubuntu-soc sshd-session[4683]: banner exchange: Connection from 192.168.56.11 port 53042: could not read protocol version
+2026-06-22T02:39:24.131809+00:00 ubuntu-soc sshd-session[4684]: Unable to negotiate with 192.168.56.11 port 53046: no matching key exchange method found. Their offer: diffie-hellman-group1-sha1,diffie-hellman-group14-sha1,diffie-hellman-group14-sha256,diffie-hellman-group16-sha512,diffie-hellman-group-exchange-sha1,diffie-hellman-group-exchange-sha256 [preauth]
+2026-06-22T02:39:24.335691+00:00 ubuntu-soc sshd-session[4686]: Unable to negotiate with 192.168.56.11 port 53048: no matching key exchange method found. Their offer: diffie-hellman-group1-sha1,diffie-hellman-group14-sha1,diffie-hellman-group14-sha256,diffie-hellman-group16-sha512,diffie-hellman-group-exchange-sha1,diffie-hellman-group-exchange-sha256 [preauth]
+2026-06-22T02:39:24.535249+00:00 ubuntu-soc sshd-session[4688]: Unable to negotiate with 192.168.56.11 port 53060: no matching key exchange method found. Their offer: diffie-hellman-group1-sha1,diffie-hellman-group14-sha1,diffie-hellman-group14-sha256,diffie-hellman-group16-sha512,diffie-hellman-group-exchange-sha1,diffie-hellman-group-exchange-sha256 [preauth]
+2026-06-22T02:39:24.881225+00:00 ubuntu-soc sshd-session[4690]: Unable to negotiate with 192.168.56.11 port 53062: no matching key exchange method found. Their offer: diffie-hellman-group1-sha1,diffie-hellman-group14-sha1,diffie-hellman-group14-sha256,diffie-hellman-group16-sha512,diffie-hellman-group-exchange-sha1,diffie-hellman-group-exchange-sha256 [preauth]
+2026-06-22T02:39:25.070138+00:00 ubuntu-soc sshd-session[4692]: Unable to negotiate with 192.168.56.11 port 53078: no matching key exchange method found. Their offer: diffie-hellman-group1-sha1,diffie-hellman-group14-sha1,diffie-hellman-group14-sha256,diffie-hellman-group16-sha512,diffie-hellman-group-exchange-sha1,diffie-hellman-group-exchange-sha256 [preauth]
+2026-06-22T02:39:25.175071+00:00 ubuntu-soc sshd-session[4694]: Unable to negotiate with 192.168.56.11 port 53088: no matching key exchange method found. Their offer: diffie-hellman-group1-sha1,diffie-hellman-group14-sha1,diffie-hellman-group14-sha256,diffie-hellman-group16-sha512,diffie-hellman-group-exchange-sha1,diffie-hellman-group-exchange-sha256 [preauth]
+2026-06-22T03:08:33.963845+00:00 ubuntu-soc sudo: pam_unix(sudo:session): session opened for user root(uid=0) by analyst(uid=1000)
+2026-06-22T03:08:33.973504+00:00 ubuntu-soc sudo: analyst : TTY=/dev/tty1 ; PWD=/home/analyst ; USER=root ; COMMAND=/usr/bin/tail -n /var/log/syslog
+2026-06-22T03:08:33.979280+00:00 ubuntu-soc sudo: pam_unix(sudo:session): session closed for user root
+2026-06-22T03:08:55.816424+00:00 ubuntu-soc sudo: pam_unix(sudo:session): session opened for user root(uid=0) by analyst(uid=1000)
+2026-06-22T03:08:55.816642+00:00 ubuntu-soc sudo: analyst : TTY=/dev/tty1 ; PWD=/home/analyst ; USER=root ; COMMAND=/usr/bin/tail -n 20 /var/log/syslog
+2026-06-22T03:08:55.822167+00:00 ubuntu-soc sudo: pam_unix(sudo:session): session closed for user root
+2026-06-22T03:09:02.801776+00:00 ubuntu-soc sudo: pam_unix(sudo:session): session opened for user root(uid=0) by analyst(uid=1000)
+2026-06-22T03:09:02.802457+00:00 ubuntu-soc sudo: analyst : TTY=/dev/tty1 ; PWD=/home/analyst ; USER=root ; COMMAND=/usr/bin/tail -n 20 /var/log/syslog
+2026-06-22T03:09:02.814857+00:00 ubuntu-soc sudo: pam_unix(sudo:session): session closed for user root
+2026-06-22T03:09:36.209725+00:00 ubuntu-soc sudo: pam_unix(sudo:session): session opened for user root(uid=0) by analyst(uid=1000)
+2026-06-22T03:09:36.210142+00:00 ubuntu-soc sudo: analyst : TTY=/dev/tty1 ; PWD=/home/analyst ; USER=root ; COMMAND=/usr/bin/tail -n 20 /var/log/apache2/acess.log
+2026-06-22T03:09:36.218823+00:00 ubuntu-soc sudo: pam_unix(sudo:session): session closed for user root
+2026-06-22T03:09:56.630938+00:00 ubuntu-soc sudo: pam_unix(sudo:session): session opened for user root(uid=0) by analyst(uid=1000)
+2026-06-22T03:09:56.631182+00:00 ubuntu-soc sudo: analyst : TTY=/dev/tty1 ; PWD=/home/analyst ; USER=root ; COMMAND=/usr/bin/tail -n 20 /var/log/apache2/access.log
+2026-06-22T03:09:56.653113+00:00 ubuntu-soc sudo: pam_unix(sudo:session): session closed for user root
+2026-06-22T03:10:01.701644+00:00 ubuntu-soc CRON[4818]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2026-06-22T03:10:01.711635+00:00 ubuntu-soc CRON[4818]: pam_unix(cron:session): session closed for user root
+2026-06-22T03:17:01.799106+00:00 ubuntu-soc CRON[4830]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2026-06-22T03:17:01.816845+00:00 ubuntu-soc CRON[4830]: pam_unix(cron:session): session closed for user root
+2026-06-22T03:54:27.153553+00:00 ubuntu-soc sudo: pam_unix(sudo:session): session opened for user root(uid=0) by analyst(uid=1000)
+2026-06-22T03:54:27.163732+00:00 ubuntu-soc sudo: analyst : TTY=/dev/tty1 ; PWD=/home/analyst ; USER=root ; COMMAND=/usr/bin/tail -n 30 /var/log/apache2/acess.log
+2026-06-22T03:54:27.170352+00:00 ubuntu-soc sudo: pam_unix(sudo:session): session closed for user root
+2026-06-22T03:54:36.440599+00:00 ubuntu-soc sudo: pam_unix(sudo:session): session opened for user root(uid=0) by analyst(uid=1000)
+2026-06-22T03:54:36.441156+00:00 ubuntu-soc sudo: analyst : TTY=/dev/tty1 ; PWD=/home/analyst ; USER=root ; COMMAND=/usr/bin/tail -n 30 /var/log/apache2/access.log
+2026-06-22T03:54:36.448180+00:00 ubuntu-soc sudo: pam_unix(sudo:session): session closed for user root
+2026-06-22T04:17:01.980301+00:00 ubuntu-soc CRON[4921]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2026-06-22T04:17:01.994101+00:00 ubuntu-soc CRON[4921]: pam_unix(cron:session): session closed for user root
+2026-06-22T04:41:34.538304+00:00 ubuntu-soc sshd-session[4990]: Invalid user david from 192.168.56.11 port 44230
+2026-06-22T04:41:41.898159+00:00 ubuntu-soc sshd-session[4990]: pam_unix(sshd:auth): check pass; user unknown
+2026-06-22T04:41:41.900615+00:00 ubuntu-soc sshd-session[4990]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=192.168.56.11 
+2026-06-22T04:41:43.994176+00:00 ubuntu-soc sshd-session[4990]: Failed password for invalid user david from 192.168.56.11 port 44230 ssh2
+2026-06-22T04:41:45.585735+00:00 ubuntu-soc sshd-session[4990]: pam_unix(sshd:auth): check pass; user unknown
+2026-06-22T04:41:47.418968+00:00 ubuntu-soc sshd-session[4990]: Failed password for invalid user david from 192.168.56.11 port 44230 ssh2
+2026-06-22T04:41:50.350033+00:00 ubuntu-soc sshd-session[4990]: pam_unix(sshd:auth): check pass; user unknown
+2026-06-22T04:41:52.462848+00:00 ubuntu-soc sshd-session[4990]: Failed password for invalid user david from 192.168.56.11 port 44230 ssh2
+2026-06-22T04:41:53.901212+00:00 ubuntu-soc sshd-session[4990]: Connection closed by invalid user david 192.168.56.11 port 44230 [preauth]
+2026-06-22T04:41:53.909807+00:00 ubuntu-soc sshd-session[4990]: PAM 2 more authentication failures; logname= uid=0 euid=0 tty=ssh ruser= rhost=192.168.56.11 
+2026-06-22T04:42:31.876741+00:00 ubuntu-soc sshd-session[4993]: Accepted password for analyst from 192.168.56.11 port 56712 ssh2
+2026-06-22T04:42:31.942075+00:00 ubuntu-soc sshd-session[4993]: pam_unix(sshd:session): session opened for user analyst(uid=1000) by analyst(uid=0)
+2026-06-22T04:42:31.965971+00:00 ubuntu-soc systemd-logind[1267]: New session '15' of user 'analyst' with class 'user' and type 'tty'.
+2026-06-22T04:42:46.085554+00:00 ubuntu-soc sshd-session[4993]: syslogin_perform_logout: logout() returned an error
+2026-06-22T04:42:46.090168+00:00 ubuntu-soc sshd-session[5092]: Received disconnect from 192.168.56.11 port 56712:11: disconnected by user
+2026-06-22T04:42:46.173692+00:00 ubuntu-soc sshd-session[5092]: Disconnected from user analyst 192.168.56.11 port 56712
+2026-06-22T04:42:46.189607+00:00 ubuntu-soc sshd-session[4993]: pam_unix(sshd:session): session closed for user analyst
+2026-06-22T04:42:46.198301+00:00 ubuntu-soc systemd-logind[1267]: Session 15 logged out. Waiting for processes to exit.
+2026-06-22T04:42:46.210406+00:00 ubuntu-soc systemd-logind[1267]: Removed session 15.
+2026-06-22T05:17:01.422339+00:00 ubuntu-soc CRON[5279]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2026-06-22T05:17:01.447100+00:00 ubuntu-soc CRON[5279]: pam_unix(cron:session): session closed for user root
+2026-06-22T05:56:19.337023+00:00 ubuntu-soc sudo: pam_unix(sudo:session): session opened for user root(uid=0) by analyst(uid=1000)
+2026-06-22T05:56:19.378507+00:00 ubuntu-soc sudo: analyst : TTY=/dev/tty1 ; PWD=/home/analyst ; USER=root ; COMMAND=/usr/bin/cp /var/log/auth.log auth.log
+2026-06-22T05:56:19.389220+00:00 ubuntu-soc sudo: pam_unix(sudo:session): session closed for user root
+2026-06-22T05:56:43.750621+00:00 ubuntu-soc sudo: pam_unix(sudo:session): session opened for user root(uid=0) by analyst(uid=1000)
+2026-06-22T05:56:43.783780+00:00 ubuntu-soc sudo: analyst : TTY=/dev/tty1 ; PWD=/home/analyst ; USER=root ; COMMAND=/usr/bin/cat auth.log
+2026-06-22T05:56:43.857871+00:00 ubuntu-soc sudo: pam_unix(sudo:session): session closed for user root
+2026-06-22T06:03:53.125489+00:00 ubuntu-soc sudo: pam_unix(sudo:session): session opened for user root(uid=0) by analyst(uid=1000)
+2026-06-22T06:03:53.137065+00:00 ubuntu-soc sudo: analyst : TTY=/dev/tty1 ; PWD=/home/analyst ; USER=root ; COMMAND=/usr/bin/systemctl status ssh
+2026-06-22T06:03:53.209796+00:00 ubuntu-soc sudo: pam_unix(sudo:session): session closed for user root
+2026-06-22T06:04:29.419463+00:00 ubuntu-soc sudo: pam_unix(sudo:session): session opened for user root(uid=0) by analyst(uid=1000)
+2026-06-22T06:04:29.424275+00:00 ubuntu-soc sudo: analyst : TTY=/dev/tty1 ; PWD=/home/analyst ; USER=root ; COMMAND=/usr/bin/ss -tulnp
+2026-06-22T06:04:29.516285+00:00 ubuntu-soc sudo: pam_unix(sudo:session): session closed for user root
+2026-06-22T06:05:20.790209+00:00 ubuntu-soc sudo: pam_unix(sudo:session): session opened for user root(uid=0) by analyst(uid=1000)
+2026-06-22T06:05:20.792889+00:00 ubuntu-soc sudo: analyst : TTY=/dev/tty1 ; PWD=/home/analyst ; USER=root ; COMMAND=/usr/sbin/ufw status
+2026-06-22T06:05:21.204576+00:00 ubuntu-soc sudo: pam_unix(sudo:session): session closed for user root
+2026-06-22T13:06:08.690523+00:00 ubuntu-soc systemd-logind[1263]: New seat seat0.
+2026-06-22T13:06:08.690524+00:00 ubuntu-soc systemd-logind[1263]: Watching system buttons on /dev/input/event0 (Power Button)
+2026-06-22T13:06:08.690527+00:00 ubuntu-soc systemd-logind[1263]: Watching system buttons on /dev/input/event1 (Sleep Button)
+2026-06-22T13:06:08.690529+00:00 ubuntu-soc systemd-logind[1263]: Watching system buttons on /dev/input/event2 (AT Translated Set 2 keyboard)
+2026-06-22T13:09:54.759264+00:00 ubuntu-soc login: pam_unix(login:session): session opened for user analyst(uid=1000) by analyst(uid=0)
+2026-06-22T13:09:54.771404+00:00 ubuntu-soc systemd-logind[1263]: New session '1' of user 'analyst' with class 'user' and type 'tty'.
+2026-06-22T13:09:54.818220+00:00 ubuntu-soc (systemd): pam_unix(systemd-user:session): session opened for user analyst(uid=1000) by analyst(uid=0)
+2026-06-22T13:09:54.818739+00:00 ubuntu-soc systemd-logind[1263]: New session '2' of user 'analyst' with class 'manager' and type 'unspecified'.
+2026-06-22T13:12:30.444202+00:00 ubuntu-soc sudo: pam_unix(sudo:session): session opened for user root(uid=0) by analyst(uid=1000)
+2026-06-22T13:12:30.454219+00:00 ubuntu-soc sudo: pam_unix(sudo:session): session closed for user root
+2026-06-22T13:13:21.909426+00:00 ubuntu-soc sudo: pam_unix(sudo:session): session opened for user root(uid=0) by analyst(uid=1000)
+2026-06-22T13:13:21.909675+00:00 ubuntu-soc sudo: pam_unix(sudo:session): session closed for user root
+2026-06-22T13:13:59.451937+00:00 ubuntu-soc sudo: pam_unix(sudo:session): session opened for user root(uid=0) by analyst(uid=1000)
+2026-06-22T13:13:59.452158+00:00 ubuntu-soc sudo: analyst : TTY=/dev/tty1 ; PWD=/home/analyst ; USER=root ; COMMAND=/usr/bin/apt install virtualbox-guest-utils virtualbox-guestx11 -y
+2026-06-22T13:14:00.024297+00:00 ubuntu-soc sudo: pam_unix(sudo:session): session closed for user root
+2026-06-22T13:14:16.588924+00:00 ubuntu-soc sudo: pam_unix(sudo:session): session opened for user root(uid=0) by analyst(uid=1000)
+2026-06-22T13:14:16.589406+00:00 ubuntu-soc sudo: analyst : TTY=/dev/tty1 ; PWD=/home/analyst ; USER=root ; COMMAND=/usr/bin/apt install virtualbox-guest-utils virtualbox-guest-x11 -y
+2026-06-22T13:16:17.496583+00:00 ubuntu-soc sudo: pam_unix(sudo:session): session closed for user root
+2026-06-22T13:17:01.462950+00:00 ubuntu-soc CRON[3452]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2026-06-22T13:17:01.469494+00:00 ubuntu-soc CRON[3452]: pam_unix(cron:session): session closed for user root
+2026-06-22T13:17:04.217536+00:00 ubuntu-soc sudo: pam_unix(sudo:session): session opened for user root(uid=0) by analyst(uid=1000)
+2026-06-22T13:17:04.218113+00:00 ubuntu-soc sudo: analyst : TTY=/dev/tty1 ; PWD=/home/analyst ; USER=root ; COMMAND=/usr/sbin/reboot 
+2026-06-22T13:17:04.227633+00:00 ubuntu-soc systemd-logind[1263]: The system will reboot now!
+2026-06-22T13:17:04.234455+00:00 ubuntu-soc sudo: pam_unix(sudo:session): session closed for user root
+2026-06-22T13:17:04.254586+00:00 ubuntu-soc systemd-logind[1263]: System is rebooting.
+2026-06-22T13:17:04.283273+00:00 ubuntu-soc login: pam_unix(login:session): session closed for user analyst
+2026-06-22T13:17:18.757408+00:00 ubuntu-soc systemd-logind[1273]: New seat seat0.
+2026-06-22T13:17:18.761894+00:00 ubuntu-soc systemd-logind[1273]: Watching system buttons on /dev/input/event0 (Power Button)
+2026-06-22T13:17:18.761897+00:00 ubuntu-soc systemd-logind[1273]: Watching system buttons on /dev/input/event1 (Sleep Button)
+2026-06-22T13:17:18.761899+00:00 ubuntu-soc systemd-logind[1273]: Watching system buttons on /dev/input/event2 (AT Translated Set 2 keyboard)
+2026-06-22T13:19:36.393165+00:00 ubuntu-soc login: pam_unix(login:session): session opened for user analyst(uid=1000) by analyst(uid=0)
+2026-06-22T13:19:36.403897+00:00 ubuntu-soc systemd-logind[1273]: New session '1' of user 'analyst' with class 'user' and type 'tty'.
+2026-06-22T13:19:36.445351+00:00 ubuntu-soc (systemd): pam_unix(systemd-user:session): session opened for user analyst(uid=1000) by analyst(uid=0)
+2026-06-22T13:19:36.446964+00:00 ubuntu-soc systemd-logind[1273]: New session '2' of user 'analyst' with class 'manager' and type 'unspecified'.
+2026-06-22T13:21:58.785382+00:00 ubuntu-soc sudo: pam_unix(sudo:session): session opened for user root(uid=0) by analyst(uid=1000)
+2026-06-22T13:21:58.785991+00:00 ubuntu-soc sudo: analyst : TTY=/dev/tty1 ; PWD=/home/analyst ; USER=root ; COMMAND=/usr/bin/cp /var/log/auth.log /mnt/shared/logs/ssh-bruteforce/auth.log
+2026-06-22T13:21:58.796186+00:00 ubuntu-soc sudo: pam_unix(sudo:session): session closed for user root
+2026-06-22T13:22:43.620434+00:00 ubuntu-soc sudo: pam_unix(sudo:session): session opened for user root(uid=0) by analyst(uid=1000)
+2026-06-22T13:22:43.629612+00:00 ubuntu-soc sudo: analyst : TTY=/dev/tty1 ; PWD=/home/analyst ; USER=root ; COMMAND=/usr/bin/cp /var/log/auth.log /mnt/shared/
+2026-06-22T13:22:43.630105+00:00 ubuntu-soc sudo: pam_unix(sudo:session): session closed for user root
+2026-06-22T13:22:47.484132+00:00 ubuntu-soc sudo: pam_unix(sudo:session): session opened for user root(uid=0) by analyst(uid=1000)
+2026-06-22T13:22:47.484405+00:00 ubuntu-soc sudo: analyst : TTY=/dev/tty1 ; PWD=/home/analyst ; USER=root ; COMMAND=/usr/bin/cp /var/log/auth.log /mnt/shared
+2026-06-22T13:22:47.528495+00:00 ubuntu-soc sudo: pam_unix(sudo:session): session closed for user root
+2026-06-22T13:25:19.202968+00:00 ubuntu-soc sudo: pam_unix(sudo:session): session opened for user root(uid=0) by analyst(uid=1000)
+2026-06-22T13:25:19.203269+00:00 ubuntu-soc sudo: analyst : TTY=/dev/tty1 ; PWD=/home/analyst ; USER=root ; COMMAND=/usr/bin/cp /var/log/auth.log /mnt/shared/logs/ssh-bruteforce/auth.log
+2026-06-22T13:25:19.208424+00:00 ubuntu-soc sudo: pam_unix(sudo:session): session closed for user root
+2026-06-22T13:25:39.141554+00:00 ubuntu-soc sudo: pam_unix(sudo:session): session opened for user root(uid=0) by analyst(uid=1000)
+2026-06-22T13:25:39.141704+00:00 ubuntu-soc sudo: analyst : TTY=/dev/tty1 ; PWD=/home/analyst ; USER=root ; COMMAND=/usr/bin/cp /var/log/auth.log /mnt/shared/auth.log
+2026-06-22T13:25:39.148426+00:00 ubuntu-soc sudo: pam_unix(sudo:session): session closed for user root
+2026-06-22T13:26:00.559869+00:00 ubuntu-soc sudo: pam_unix(sudo:session): session opened for user root(uid=0) by analyst(uid=1000)
+2026-06-22T13:26:00.560021+00:00 ubuntu-soc sudo: analyst : TTY=/dev/tty1 ; PWD=/home/analyst ; USER=root ; COMMAND=/usr/bin/cp /var/log/auth.log /mnt/shared/logs/ssh-bruteforce/auth.log
+2026-06-22T13:26:00.566738+00:00 ubuntu-soc sudo: pam_unix(sudo:session): session closed for user root
+2026-06-22T13:31:23.789363+00:00 ubuntu-soc sudo: pam_unix(sudo:session): session opened for user root(uid=0) by analyst(uid=1000)
+2026-06-22T13:31:23.795486+00:00 ubuntu-soc sudo: analyst : TTY=/dev/tty1 ; PWD=/home/analyst ; USER=root ; COMMAND=/usr/bin/cp /var/log/authlog /media/sfc_soc-log-analysis-lab/logs/ssh-bruteforce/
+2026-06-22T13:31:23.796208+00:00 ubuntu-soc sudo: pam_unix(sudo:session): session closed for user root
+2026-06-22T13:31:40.986521+00:00 ubuntu-soc sudo: pam_unix(sudo:session): session opened for user root(uid=0) by analyst(uid=1000)
+2026-06-22T13:31:40.986635+00:00 ubuntu-soc sudo: analyst : TTY=/dev/tty1 ; PWD=/home/analyst ; USER=root ; COMMAND=/usr/bin/cp /var/log/auth.log /media/sfc_soc-log-analysis-lab/logs/ssh-bruteforce/
+2026-06-22T13:31:40.991264+00:00 ubuntu-soc sudo: pam_unix(sudo:session): session closed for user root
+2026-06-22T13:32:49.328941+00:00 ubuntu-soc sudo: pam_unix(sudo:session): session opened for user root(uid=0) by analyst(uid=1000)
+2026-06-22T13:32:49.329152+00:00 ubuntu-soc sudo: analyst : TTY=/dev/tty1 ; PWD=/home/analyst ; USER=root ; COMMAND=/usr/bin/cp /var/log/auth.log /media/sf_soc-log-analysis-lab/logs/ssh-bruteforce/
