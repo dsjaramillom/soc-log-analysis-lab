@@ -165,6 +165,51 @@ Completed:
 
 ---
 
+### Phase 3 — Reconnaissance with Nmap
+
+Completed:
+
+Reconnaissance included:
+
+* Open port discovery
+* Service enumeration
+* Version detection
+* OS fingerprinting
+* HTTP endpoint probing
+* NSE script execution
+
+Findings:
+
+* OpenSSH 10.2p1
+* Apache 2.4.66
+* Linux OS fingerprint confirmed
+
+Apache log evidence showed:
+
+* GET /
+* OPTIONS /
+* PROPFIND /
+* POST /sdk
+* GET /HNAP1
+* GET /evox/about
+
+Evidence:
+
+![Nmap Scan](screenshots/nmap-recon/01-nmap-scan-results.png)
+
+![Apache Log Impact](screenshots/nmap-recon/02-apache-log-impact.png)
+
+Documentation:
+
+* `reports/nmap-scan-report.md`
+
+MITRE ATT&CK:
+
+* T1595 — Active Scanning
+* T1046 — Network Service Discovery
+
+---
+
 ### Phase 4 — SSH Brute Force Analysis
 
 Completed:
@@ -209,21 +254,6 @@ soc-log-analysis-lab/
 ---
 
 ## Roadmap
-
-### Phase 3 — Reconnaissance with Nmap
-
-Goal:
-
-* Identify open ports
-* Detect services
-* Fingerprint operating system
-* Analyze reconnaissance logs
-
-Planned report:
-
-* `reports/nmap-scan-report.md`
-
----
 
 ### Phase 5 — Web Enumeration with Gobuster
 
@@ -290,13 +320,13 @@ Standard format:
 Current active phase:
 
 ```text
-Phase 3 — Reconnaissance with Nmap
+Phase 5 — Web Enumeration with Gobuster
 ```
 
 Next attack:
 
 ```bash
-nmap -A 192.168.56.10
+gobuster dir -u http://192.168.56.10 -w wordlist.txt
 ```
 
 ---
