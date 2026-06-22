@@ -296,6 +296,46 @@ MITRE ATT&CK:
 
 ---
 
+### Phase 6 — Manual Log Analysis
+
+Completed:
+
+Manual investigation included:
+
+* Failed SSH authentication review
+* Successful login validation
+* Privileged activity analysis
+* Nmap user-agent detection
+* Gobuster user-agent detection
+* Source IP correlation
+* HTTP method frequency analysis
+* 404 burst analysis
+
+Key findings:
+
+* Single-source attack activity identified
+* Multiple reconnaissance indicators confirmed
+* Web enumeration patterns detected
+* Rare HTTP methods observed
+* Authentication and privilege escalation correlated
+
+Evidence:
+
+* `screenshots/manual-analysis/01-failed-passwords.png`
+* `screenshots/manual-analysis/02-successful-logins.png`
+* `screenshots/manual-analysis/03-sudo-activity.png`
+* `screenshots/manual-analysis/04-nmap-user-agent-detection.png`
+* `screenshots/manual-analysis/05-gobuster-user-agent-detection.png`
+* `screenshots/manual-analysis/06-top-source-ips.png`
+* `screenshots/manual-analysis/07-http-method-analysis.png`
+* `screenshots/manual-analysis/08-404-burst-analysis.png`
+
+Documentation:
+
+* `notes/manual-log-analysis.md`
+
+---
+
 ### Phase 7 — Python Automation
 
 Planned scripts:
