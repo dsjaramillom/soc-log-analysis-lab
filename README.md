@@ -1,14 +1,14 @@
 # SOC Log Analysis Lab
 
-A hands-on cybersecurity lab focused on attack simulation, log analysis, incident investigation, and defensive documentation.
+A hands-on cybersecurity lab focused on attack simulation, log analysis, incident investigation, and detection automation.
 
-This repository documents practical blue team exercises performed in a controlled environment using Ubuntu Server as the target system and Kali Linux as the attacking machine.
+This repository documents a complete attack lifecycle in a controlled lab environment using Kali Linux as the attacker and Ubuntu Server as the victim, following a SOC Tier 1 investigation workflow.
 
 ---
 
 ## Project Objective
 
-The goal of this project is to simulate real-world attack scenarios and analyze their impact from a SOC Tier 1 perspective.
+The goal of this project was to simulate real-world attack scenarios, analyze their traces in logs, and automate parts of the detection process.
 
 Main focus areas:
 
@@ -17,8 +17,10 @@ Main focus areas:
 * SSH brute force detection
 * Web enumeration analysis
 * Apache access log investigation
+* IOC extraction
+* Detection engineering
 * Incident documentation
-* Threat detection automation
+* Python log automation
 
 ---
 
@@ -32,7 +34,7 @@ Environment:
 
 * Kali Linux
 * Ubuntu Server
-* VirtualBox Internal Network: `SOC-LAB`
+* VirtualBox Internal Network (`SOC-LAB`)
 * NAT enabled for internet access
 
 ---
@@ -46,6 +48,8 @@ IP Address:
 ```text
 192.168.56.10
 ```
+
+---
 
 ### Kali Linux
 
@@ -72,38 +76,38 @@ Evidence:
 
 ### SSH
 
-Service status:
+Purpose:
+
+* Authentication analysis
+* Brute force simulation
+* Privileged activity tracking
+
+Evidence:
 
 ![SSH Status](screenshots/lab-setup/04-ssh-service-status.png)
 
-Purpose:
-
-* Remote administration
-* Authentication analysis
-* Brute force simulation target
-
 ---
 
-### Apache
-
-Service status:
-
-![Apache Status](screenshots/lab-setup/03-apache-service-status.png)
+### Apache HTTP Server
 
 Purpose:
 
 * Web enumeration analysis
-* HTTP request logging
-* Web attack simulation
+* HTTP log monitoring
+* Suspicious request detection
+
+Evidence:
+
+![Apache Status](screenshots/lab-setup/03-apache-service-status.png)
 
 ---
 
 ## Open Ports Validation
 
-Open ports identified:
+Detected services:
 
-* Port 22 (SSH)
-* Port 80 (HTTP)
+* 22/tcp (SSH)
+* 80/tcp (HTTP)
 
 Evidence:
 
@@ -111,39 +115,18 @@ Evidence:
 
 ---
 
-## Baseline Log Documentation
-
-Before launching attacks, baseline logs were reviewed to establish normal system behavior.
-
-Reviewed logs:
-
-* `/var/log/auth.log`
-* `/var/log/apache2/access.log`
-* `/var/log/syslog`
-
-Purpose:
-
-* Understand normal system activity
-* Create comparison points for future attacks
-* Improve incident visibility
-
-Evidence:
-
-![Baseline Logs](screenshots/lab-setup/06-baseline-log-preview.png)
+# Completed Phases
 
 ---
 
-## Completed Phases
-
-### Phase 1 — Infrastructure Setup
+## Phase 1 — Infrastructure Setup
 
 Completed:
 
 * Ubuntu installation
 * Kali installation
-* VirtualBox networking configuration
+* VirtualBox network configuration
 * Internal communication validation
-* Initial documentation
 
 Documentation:
 
@@ -153,55 +136,43 @@ Documentation:
 
 ---
 
-### Phase 2 — Victim Preparation & Baseline
+## Phase 2 — Victim Preparation & Baseline
 
 Completed:
 
-* System update
+* System updates
 * SSH verification
 * Apache verification
 * Open ports validation
 * Baseline log inspection
 
+Evidence:
+
+![Baseline Logs](screenshots/lab-setup/06-baseline-log-preview.png)
+
 ---
 
-### Phase 3 — Reconnaissance with Nmap
+## Phase 3 — Reconnaissance with Nmap
 
-Completed:
+Tool:
 
-Reconnaissance included:
+* Nmap
 
-* Open port discovery
+Techniques:
+
+* Port scanning
 * Service enumeration
 * Version detection
 * OS fingerprinting
 * HTTP endpoint probing
-* NSE script execution
-
-Findings:
-
-* OpenSSH 10.2p1
-* Apache 2.4.66
-* Linux OS fingerprint confirmed
-
-Apache log evidence showed:
-
-* GET /
-* OPTIONS /
-* PROPFIND /
-* POST /sdk
-* GET /HNAP1
-* GET /evox/about
-
-Evidence:
-
-![Nmap Scan](screenshots/nmap-recon/01-nmap-scan-results.png)
-
-![Apache Log Impact](screenshots/nmap-recon/02-apache-log-impact.png)
 
 Documentation:
 
-* `reports/nmap-scan-report.md`
+* `reports/nmap-recon/incident-report.md`
+
+Evidence:
+
+* `screenshots/nmap-recon/`
 
 MITRE ATT&CK:
 
@@ -210,26 +181,26 @@ MITRE ATT&CK:
 
 ---
 
-### Phase 4 — SSH Brute Force Analysis
+## Phase 4 — SSH Brute Force Analysis
 
-Completed:
+Tool:
 
-Attack simulation included:
+* Hydra
+
+Techniques:
 
 * Invalid user attempts
-* Failed password authentication
-* Successful login validation
-* Privilege escalation visibility
-
-Evidence:
-
-![Brute Force Attempts](screenshots/ssh-bruteforce/01-kali-bruteforce.png)
-
-![Auth Log Report](screenshots/ssh-bruteforce/02-auth.log-report.png)
+* Failed authentication
+* Successful login simulation
+* Privilege escalation tracking
 
 Documentation:
 
 * `reports/ssh-bruteforce/incident-report.md`
+
+Evidence:
+
+* `screenshots/ssh-bruteforce/`
 
 MITRE ATT&CK:
 
@@ -238,101 +209,213 @@ MITRE ATT&CK:
 
 ---
 
-## Repository Structure
+## Phase 5 — Web Enumeration Analysis
 
-```text
-soc-log-analysis-lab/
-├── README.md
-├── lab-setup/
-├── logs/
-├── reports/
-├── screenshots/
-├── scripts/
-└── notes/
-```
+Tool:
 
----
+* Gobuster
 
-### Phase 5 — Web Enumeration with Gobuster
+Techniques:
 
-Completed:
-
-Attack simulation included:
-
-- Directory brute forcing
-- Hidden endpoint discovery
-- Protected resource detection
-- Apache log analysis
-- Enumeration pattern identification
-
-Findings:
-
-- /.hta
-- /.htpasswd
-- /.htaccess
-- /index.html
-- /server-status
-
-Apache logs showed:
-
-- Sequential GET requests
-- Multiple 404 responses
-- High request frequency
-- Gobuster signature detection
-
-Evidence:
-
-![Gobuster Scan](screenshots/web-enumeration/01-gobuster-scan.png)
-
-![Apache Enumeration Logs](screenshots/web-enumeration/02-apache-acesslog.png)
+* Directory brute forcing
+* Hidden endpoint discovery
+* Sensitive path identification
 
 Documentation:
 
-- `reports/web-enumeration/incident-report.md`
-
-MITRE ATT&CK:
-
-- T1595.003 — Web Vulnerability Scanning
-
----
-
-### Phase 6 — Manual Log Analysis
-
-Completed:
-
-Manual investigation included:
-
-* Failed SSH authentication review
-* Successful login validation
-* Privileged activity analysis
-* Nmap user-agent detection
-* Gobuster user-agent detection
-* Source IP correlation
-* HTTP method frequency analysis
-* 404 burst analysis
-
-Key findings:
-
-* Single-source attack activity identified
-* Multiple reconnaissance indicators confirmed
-* Web enumeration patterns detected
-* Rare HTTP methods observed
-* Authentication and privilege escalation correlated
+* `reports/web-enumeration/incident-report.md`
 
 Evidence:
 
-* `screenshots/manual-analysis/01-failed-passwords.png`
-* `screenshots/manual-analysis/02-successful-logins.png`
-* `screenshots/manual-analysis/03-sudo-activity.png`
-* `screenshots/manual-analysis/04-nmap-user-agent-detection.png`
-* `screenshots/manual-analysis/05-gobuster-user-agent-detection.png`
-* `screenshots/manual-analysis/06-top-source-ips.png`
-* `screenshots/manual-analysis/07-http-method-analysis.png`
-* `screenshots/manual-analysis/08-404-burst-analysis.png`
+* `screenshots/web-enumeration/`
+
+MITRE ATT&CK:
+
+* T1595.003 — Web Vulnerability Scanning
+
+---
+
+## Phase 6 — Manual Log Analysis
+
+Manual investigation included:
+
+* Failed SSH login analysis
+* Successful login correlation
+* Sudo activity review
+* Nmap detection
+* Gobuster detection
+* Source IP correlation
+* HTTP method analysis
+* 404 burst analysis
 
 Documentation:
 
 * `notes/manual-log-analysis.md`
 
+Evidence:
+
+* `screenshots/manual-analysis/`
+
 ---
 
+## Phase 7 — Python Automation
+
+Custom detection scripts:
+
+* `failed_logins.py`
+* `count_failed_logins_by_ip.py`
+* `suspicious_web_requests.py`
+* `sudo_activity_parser.py`
+
+Purpose:
+
+Automate repetitive SOC analyst tasks.
+
+Documentation:
+
+* `reports/python-automation/automation-report.md`
+
+Evidence:
+
+* `screenshots/python-automation/`
+
+---
+
+## Phase 8 — Final Project Summary
+
+Consolidated:
+
+* Attack timeline
+* IOC extraction
+* MITRE ATT&CK mapping
+* Detection opportunities
+* Security recommendations
+* Professional reflection
+
+Documentation:
+
+* `reports/final-project-summary/final-project-summary.md`
+
+---
+
+# Raw Evidence Collected
+
+Preserved logs:
+
+```text
+logs/
+├── syslog
+├── nmap-recon/
+│   └── nmap-scan.txt
+├── ssh-bruteforce/
+│   └── auth.log
+└── web-enumeration/
+    ├── access.log
+    ├── error.log
+    └── gobuster-results.txt
+```
+
+---
+
+# Detection Scripts
+
+```text
+scripts/
+├── privilege-analysis/
+│   └── sudo_activity_parser.py
+├── ssh-bruteforce/
+│   ├── count_failed_logins_by_ip.py
+│   └── failed_logins.py
+└── web-enumeration/
+    └── suspicious_web_requests.py
+```
+
+---
+
+# Repository Structure
+
+```text
+soc-log-analysis-lab/
+│   README.md
+│
+├── lab-setup/
+├── logs/
+├── notes/
+├── reports/
+├── screenshots/
+└── scripts/
+```
+
+---
+
+# Key Indicators of Compromise (IoCs)
+
+Observed:
+
+Source IP:
+
+```text
+192.168.56.11
+```
+
+User-agents:
+
+* Gobuster
+* Nmap Scripting Engine
+
+Suspicious HTTP methods:
+
+* OPTIONS
+* PROPFIND
+* POST
+
+Sensitive paths:
+
+* /server-status
+* /.htaccess
+* /.htpasswd
+* /.hta
+
+Authentication indicators:
+
+* Invalid user david
+* Multiple failed login attempts
+
+Privilege indicators:
+
+* Sudo activity
+* Root session openings
+
+---
+
+# Skills Demonstrated
+
+* SOC Tier 1 workflow
+* Linux log analysis
+* Threat detection
+* IOC extraction
+* Incident reporting
+* MITRE ATT&CK mapping
+* Python scripting
+* Basic detection engineering
+* Attack simulation
+* Blue team fundamentals
+
+---
+
+# Current Training
+
+* Cisco Junior Cybersecurity Analyst
+* Linux log analysis
+* SOC Tier 1 preparation
+* Python for security automation
+
+---
+
+## Final Note
+
+This project represents the beginning of my transition into cybersecurity.
+
+It reflects practical experience in attack simulation, log analysis, threat detection, and security automation.
+
+This is only the beginning.
